@@ -2,4 +2,10 @@ const express = require("express");
 
 const app = express();
 
-app.listen(8000);
+app.get("/", (req, res) => {
+  res.send(<h1>Hello world</h1>);
+});
+
+app.listen(8000, () => {
+  console.log("API server listening on: ", 8000);
+});
